@@ -9,6 +9,11 @@ Find the tutorial on how to create your own dog classifier in [this Medium artic
 ### Dataset
 450 different dog images are obtained using [Bing Image Search API](https://www.microsoft.com/en-us/bing/apis/bing-image-search-api). There are 150 images of each type of dog. The non-relevant images are removed. 
 ### Model
+
+I use a convolution neural network (CNN) with architecture ResNet to train the model. 
+
+*cnn_learner* will also load a pre-trained model that have already been trained to recognize a thousand different categories across 1.3 million photos.
+
 The model was trained to recognize 3 types of dog: Winner, Chihuahua, and Basset Hound using fastai. You can find the details of the training in [train_dog_classifier.ipnb](./train_dog_classifier.ipynb) notebook. The model was saved to [dog.pkl](./dog.pkl).
 
 
