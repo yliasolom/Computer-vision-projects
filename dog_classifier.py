@@ -1,6 +1,8 @@
 from fastai.vision.widgets import *
 from fastai.vision.all import *
 
+# fast.ai—Making neural nets uncool again
+
 from pathlib import Path
 
 import streamlit as st
@@ -36,4 +38,4 @@ if __name__=='__main__':
     file_name='dog.pkl'
 
     predictor = Predict(file_name)
-
+### Yeeeep)))
