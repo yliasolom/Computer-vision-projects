@@ -1,5 +1,7 @@
 # create an app to classify dogs
 
+# to run the app - `streamlit run dog_classifier.py`
+
 from fastai.vision.widgets import *
 from fastai.vision.all import *
 
