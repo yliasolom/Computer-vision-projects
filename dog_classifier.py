@@ -1,3 +1,5 @@
+# create an app to classify dogs
+
 from fastai.vision.widgets import *
 from fastai.vision.all import *
 
@@ -17,15 +19,24 @@ class Predict:
     
     @staticmethod
     def get_image_from_upload():
+        
+    # get_image_from_upload : Allow us to upload images from your local files
+    
         uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg', 'jpg'])
         if uploaded_file is not None:
             return PILImage.create((uploaded_file))
         return None
 
     def display_output(self):
+        
+        # display_output : Display the image after uploading it
+        
         st.image(self.img.to_thumb(500,500), caption='Uploaded Image')
 
     def get_prediction(self):
+        
+        # get_prediction : Create a button to classify the image
+
 
         if st.button('Classify'):
             pred, pred_idx, probs = self.learn_inference.predict(self.img)
